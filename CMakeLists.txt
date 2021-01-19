@@ -19,3 +19,13 @@ install(TARGETS ${PROJECT_NAME}
 install(
   DIRECTORY include/sheitmann DESTINATION include
 )
+
+configure_file(
+  ${CMAKE_CURRENT_SOURCE_DIR}/libargtable2.pc.in
+  ${CMAKE_CURRENT_BINARY_DIR}/libargtable2.pc
+@ONLY)
+
+install(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/libargtable2.pc
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
+)

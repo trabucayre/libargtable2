@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/include
+
+Name: libargtable2
+Description: A makestuff build of Stewart Heitmann's argtable2.
+Version: 20170708
+Libs: -L${libdir} -largtable2
+Cflags: -I${includedir}
+
